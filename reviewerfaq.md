@@ -18,7 +18,7 @@ This FAQ is intended to help reviewers and action editors navigate OpenReview an
 ## Communication
 
 ### Who contacts reviewers to kick off reviewing?
-The editor-in-chief email all reviewers to kick off reviewing. 
+The editor-in-chief emails all reviewers to kick off reviewing. 
 
 ### How can I communicate with reviewers?
 You may communicate with reviewers using the discussion forum. In OpenReview, you should see a button labeled "Official Comment"

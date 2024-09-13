@@ -80,7 +80,7 @@ If you want general support regarding ARR, please contact `support at aclrolling
   <img src="images/people/anna_rogers.jpg" alt="Anna Rogers">
   <div>
     <a href="https://annargrs.github.io/">Anna Rogers</a><br>
-    University of Copenhagen
+    IT University of Copenhagen
   </div>
 </div>
 
@@ -266,31 +266,3 @@ Contact: `tech at aclrollingreview.org`
 </div>
 
 Contact: `support at aclrollingreview.org`
-
-## Mentorship Team
-
-<div class="person">
-  <img src="images/people/isabelle_augenstein.jpg" alt="Isabelle Augenstein">
-  <div>
-    <a href="https://isabelleaugenstein.github.io/">Isabelle Augenstein</a><br>
-    University of Copenhagen
-  </div>
-</div>
-
-<div class="person">
-  <img src="images/people/placeholder.jpg" alt="Sebastian Riedel">
-  <div>
-    <a href="https://www.riedelcastro.org/">Sebastian Riedel</a><br>
-    Facebook AI and University College London
-  </div>
-</div>
-
-<div class="person">
-  <img src="images/people/anna_rogers.jpg" alt="Anna Rogers">
-  <div>
-    <a href="https://annargrs.github.io/">Anna Rogers</a><br>
-    University of Copenhagen
-  </div>
-</div>
-
-Contact: `mentorship at aclrollingreview.org`

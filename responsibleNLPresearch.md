@@ -5,9 +5,9 @@ We expect authors to show that they follow best practices in two ways:
 1. by filling in the checklist to ensure that best practices are put in place when using, creating or providing assets,
 2. by including a discussion in the paper about any potential positive or negative societal impacts and any limitations of the work. The guidelines below provide additional information about what should be discussed.
 
-The checklist is completed as part of the submission form. Note, prior to February 2024, it was completed as a separate PDF.
+The checklist is completed as part of the submission form. Note, prior to February 2024, it was completed as a separate PDF. 
 
-Reviewers will be asked to use the checklist as one of the factors in their evaluation.
+Most questions in this checklist address the kinds of information that is often asked by reviewers (e.g. experimental details, annotation protocols, IRB approval, etc.). This allows the checklist to serve as a kind of FAQ for the reviewers, pre-empting questions that would otherwise be asked in the author response period. Reviewers are asked to use the checklist information as one of the factors in their evaluation.
 
 ## Guidelines for Answering Checklist Questions
 For each question in the checklist:
@@ -34,12 +34,6 @@ Reflect on the factors that influence the performance of your approach. For exam
 - Consider different stakeholders that could be impacted by your work. Is it possible that research benefits some stakeholders while harming others? Does it pay special attention to vulnerable or marginalized communities? Does the research lead to exclusion of certain groups? See [Dev et. al (2021)](https://aclanthology.org/2021.emnlp-main.150.pdf) for examples.
 - Consider dual use, i.e, possible benefits or harms that could arise when the technology is being used as intended and functioning correctly, benefits or harms that could arise when the technology is being used as intended but gives incorrect results, and benefits or harms following from (intentional or unintentional) misuse of the technology.
 - Consider citing previous work on relevant mitigation strategies for the potential risks of the work (e.g., gated release of models, providing defenses in addition to attacks, mechanisms for monitoring misuse, mechanisms to monitor how a system learns from feedback over time, improving the efficiency and accessibility of NLP).
-
-**A3. Do the abstract and introduction summarize the paper’s main claims?**
-- The main claims in the paper should be clearly stated in the abstract and in the introduction.
-- These claims should be supported by evidence presented in the paper, potentially in the form of experimental results, reasoning, or theory. The connection between which evidence supports which claims should be clear.
-- The context of the contributions of the paper should be clearly described, and it should be stated how much the results would be expected to generalize to other contexts.
-- It should be easy for a casual reader to distinguish between the contributions of the paper and open questions, future work, aspirational goals, motivations, etc.
 
 ### B. Did you use or create *scientific artifacts*?
 - Scientific artifacts may include code, data, models or other artifacts.
@@ -101,7 +95,7 @@ Even for commonly-used benchmark datasets, include the number of examples in tra
 - In all cases, when a result is reported, it should be clear if it is from a single run, the max across N random seeds, the average, etc.
 - When reporting a result on a test set, be sure to report a result of the same model on the validation set (if available) so others reproducing your work don't need to evaluate on the test set to confirm a reproduction.
 
-**C4. If you used existing packages (e.g., for preprocessing, for normalization, or for evaluation), did you report the implementation, model, and parameter settings used (e.g., NLTK, Spacy, ROUGE, etc.)?**		
+**C4. If you used existing packages (e.g., for preprocessing, for normalization, or for evaluation, such as NLTK, Spacy, ROUGE, etc.), did you report the implementation, model, and parameter settings used?**		
 - The version number or reference to specific implementation is important because different implementations of the same metric can lead to slightly different results (e.g., ROUGE).
 - The paper cites the original work for the model or software package. If no paper exists, a URL to the website or repository is included.
 - If you modified an existing library, explain what changes you made.
@@ -145,4 +139,4 @@ The [ARR review form](https://aclrollingreview.org/reviewform) takes aspects of 
 
 ## Credits
 
-This checklist was developed by Marine Carpuat, Marie-Catherine de Marneffe and Ivan Vladimir Meza Ruiz, the NAACL 2022 program chairs, working with Jesse Dodge, and with the ARR editors in chief. Additional input was provided by the other NAACL 2022 reproducibility chairs, Margot Mieskes, Anna Rogers, and the ACL Ethics Committee.
+This checklist was developed by Marine Carpuat, Marie-Catherine de Marneffe and Ivan Vladimir Meza Ruiz, the NAACL 2022 program chairs, working with Jesse Dodge, and with the ARR editors in chief. Additional input was provided by the other NAACL 2022 reproducibility chairs, Margot Mieskes, Anna Rogers, and the ACL Ethics Committee. Updated for ARR October 2024 cycle by Anna Rogers, based on discussions with ARR board.

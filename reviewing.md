@@ -201,7 +201,7 @@ Questions from venues about subscribing to ARR should be directed to the Editors
 
 <style>
   .panel {
-    display: none; /* Content hidden by default */
+    display: none; /* Hide all content by default */
     margin-top: 0;
   }
 
@@ -219,10 +219,10 @@ Questions from venues about subscribing to ARR should be directed to the Editors
     font-size: 14px;
     color: gray;
     font-style: italic;
-    text-align: center; /* Center the message */
-    display: block; /* Ensure the message appears on a new line */
+    text-align: center;
+    display: block;
     margin-bottom: 1em;
-    cursor: pointer; /* Make the message look clickable */
+    cursor: pointer;
   }
 </style>
 
@@ -231,7 +231,7 @@ Questions from venues about subscribing to ARR should be directed to the Editors
     // Find all H1 headers
     var headers = document.querySelectorAll("h1");
 
-    headers.forEach(function(header) {
+    headers.forEach(function(header, index) {
       // Collect all content under each header until the next H1
       var content = [];
       var sibling = header.nextElementSibling;
@@ -248,7 +248,7 @@ Questions from venues about subscribing to ARR should be directed to the Editors
         panel.appendChild(item);
       });
 
-      // Insert the panel after the header (the content is hidden inside this panel)
+      // Insert the panel after the header
       header.parentNode.insertBefore(panel, header.nextElementSibling);
 
       // Add the "Click to view full content" message after the header
@@ -257,7 +257,7 @@ Questions from venues about subscribing to ARR should be directed to the Editors
       viewMessage.innerText = "Click to view full content";
       header.parentNode.insertBefore(viewMessage, panel);
 
-      // Function to toggle content visibility and hide the message
+      // Function to toggle content visibility
       function toggleContent() {
         header.classList.toggle("active");
         panel.style.display = panel.style.display === "block" ? "none" : "block";
@@ -268,14 +268,20 @@ Questions from venues about subscribing to ARR should be directed to the Editors
         }
       }
 
-      // Both the header and message can toggle the content visibility
+      // Both the header and message can toggle content visibility
       header.addEventListener("click", toggleContent);
       viewMessage.addEventListener("click", toggleContent);
+
+      // If it's the first H1, expand the content by default
+      if (index === 0) {
+        panel.style.display = "block";
+        viewMessage.style.display = "none"; // Hide the message for the first H1
+      }
     });
 
-    // Ensure all headers are visible when the page loads (content remains hidden)
+    // Ensure all H1 headers are visible when the page loads
     headers.forEach(function(header) {
-      header.style.display = 'block'; // Make sure all headers are visible immediately
+      header.style.display = 'block'; // Ensure all headers are visible immediately
     });
   });
 </script>

@@ -9,7 +9,7 @@ POSITION SUMMARY
 
 The workflow manager will:
 
-* lead the implementation of data manipulation from OpenReview required to fit the needs of the ARR peer-review process.
+* Lead the implementation of data manipulation from OpenReview required to fit the needs of the ARR peer-review process.
 * Collaborate with the ARR team (editors in chief, CTO, and tech support) on identifying, designing, and implementing software solutions to streamline the review process in ARR.
 * Work closely with the ARR team and conference PCs to provide a smooth transition between the review and commitment stages.
 * Collaborate with the ARR team and support the implementation of data-driven approaches to improve the review process at ARR.
@@ -35,12 +35,12 @@ ADDITIONAL INFORMATION
 
 The workflow manager works under the direct supervision of the ARR Editors-in-Chief.
 
-The desired start date of this position is November 1, 2024. The workload varies somewhat
+The desired start date of this position is November 1, 2024. 
 
-throughout the bi-monthly cycles but averages approximately 20 hours weekly.
+The workload varies somewhat throughout the bi-monthly cycles but averages approximately 20 hours weekly.
 
-To apply, submit a cover letter, CV/resume, and three references. If you have
+To apply, submit a cover letter, CV/resume, and three references.
 
-questions about this position or to apply, contact us via
+If you havequestions about this position or to apply, contact us via
 
 email at: editors@aclrollingreview.org [1] and thamar.solorio@mbzuai.ac.ae [2].

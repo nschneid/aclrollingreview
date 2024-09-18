@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ARR Job Ads\: Workflow Manager
+title: ARR Job Ads\\: Workflow Manager
 ---
 
 The Association for Computational Linguistics Rolling Review (ARR) seeks a workflow manager to support the regular operations of ARR bi-monthly reviewing cycles. This position sits at the heart of the peer-review infrastructure that handles our major ACL conferences. The goal of this role is to support the customization of the infrastructure used by ARR, which currently is OpenReview.

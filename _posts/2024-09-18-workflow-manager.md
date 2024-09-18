@@ -41,6 +41,6 @@ The workload varies somewhat throughout the bi-monthly cycles but averages appro
 
 To apply, submit a cover letter, CV/resume, and three references.
 
-If you havequestions about this position or to apply, contact us via
+If you have questions about this position or to apply, contact us via
 
 email at: editors@aclrollingreview.org [1] and thamar.solorio@mbzuai.ac.ae [2].

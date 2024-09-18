@@ -201,7 +201,7 @@ Questions from venues about subscribing to ARR should be directed to the Editors
 
 <style>
   .panel {
-    display: none; /* Content is hidden by default */
+    display: none; /* Content hidden by default */
     margin-top: 0;
   }
 
@@ -220,9 +220,9 @@ Questions from venues about subscribing to ARR should be directed to the Editors
     color: gray;
     font-style: italic;
     text-align: center; /* Center the message */
-    display: block; /* Display the message on a new line */
+    display: block; /* Ensure the message appears on a new line */
     margin-bottom: 1em;
-    cursor: pointer; /* Add pointer to make it look clickable */
+    cursor: pointer; /* Make the message look clickable */
   }
 </style>
 
@@ -232,7 +232,7 @@ Questions from venues about subscribing to ARR should be directed to the Editors
     var headers = document.querySelectorAll("h1");
 
     headers.forEach(function(header) {
-      // Collect content under each header until the next H1
+      // Collect all content under each header until the next H1
       var content = [];
       var sibling = header.nextElementSibling;
 
@@ -241,36 +241,41 @@ Questions from venues about subscribing to ARR should be directed to the Editors
         sibling = sibling.nextElementSibling;
       }
 
-      // Create a <div class="panel"> to wrap the content
+      // Create a <div class="panel"> to wrap the content under the header
       var panel = document.createElement("div");
       panel.className = "panel";
       content.forEach(function(item) {
         panel.appendChild(item);
       });
 
-      // Insert the panel after the header
+      // Insert the panel after the header (the content is hidden inside this panel)
       header.parentNode.insertBefore(panel, header.nextElementSibling);
 
-      // Add the "Click to view full content" message for all headers
+      // Add the "Click to view full content" message after the header
       var viewMessage = document.createElement("span");
       viewMessage.className = "view-content-msg";
       viewMessage.innerText = "Click to view full content";
       header.parentNode.insertBefore(viewMessage, panel);
 
-      // Function to toggle content and hide message
+      // Function to toggle content visibility and hide the message
       function toggleContent() {
         header.classList.toggle("active");
         panel.style.display = panel.style.display === "block" ? "none" : "block";
 
-        // Hide the "Click to view full content" message once content is shown
+        // Hide the "Click to view full content" message when the content is expanded
         if (panel.style.display === "block") {
           viewMessage.style.display = "none";
         }
       }
 
-      // Click event for both header and message
+      // Both the header and message can toggle the content visibility
       header.addEventListener("click", toggleContent);
       viewMessage.addEventListener("click", toggleContent);
+    });
+
+    // Ensure all headers are visible when the page loads (content remains hidden)
+    headers.forEach(function(header) {
+      header.style.display = 'block'; // Make sure all headers are visible immediately
     });
   });
 </script>

@@ -199,3 +199,48 @@ Note that the ARR review process is not customized to any particular venue. All 
 
 Questions from venues about subscribing to ARR should be directed to the Editors-in-Chief.
 
+
+<style>
+  .panel {
+    display: none;
+    margin-top: 0;
+  }
+
+  h1 {
+    cursor: pointer;
+  }
+
+  h1.active + .panel {
+    display: block;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var headers = document.querySelectorAll("h1");
+
+    headers.forEach(function(header) {
+      // Wrap the content under the header in a div.panel
+      var content = [];
+      var sibling = header.nextElementSibling;
+
+      while (sibling && sibling.tagName !== "H1") {
+        content.push(sibling);
+        sibling = sibling.nextElementSibling;
+      }
+
+      var panel = document.createElement("div");
+      panel.className = "panel";
+      content.forEach(function(item) {
+        panel.appendChild(item);
+      });
+
+      header.parentNode.insertBefore(panel, header.nextElementSibling);
+
+      // Add click event to toggle the panel
+      header.addEventListener("click", function() {
+        header.classList.toggle("active");
+      });
+    });
+  });
+</script>

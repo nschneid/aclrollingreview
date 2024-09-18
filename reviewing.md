@@ -201,7 +201,7 @@ Questions from venues about subscribing to ARR should be directed to the Editors
 
 <style>
   .panel {
-    display: none; /* All content is hidden by default */
+    display: none; /* Content is hidden by default for all sections except the first one */
     margin-top: 0;
   }
 
@@ -210,17 +210,25 @@ Questions from venues about subscribing to ARR should be directed to the Editors
   }
 
   h1.active + .panel {
-    display: block; /* Content is shown when a header is clicked */
+    display: block; /* When clicked, the content is shown */
   }
+
+  /* Style for the "Click to view full content" message */
+  .view-content-msg {
+    font-size: 14px;
+    color: gray;
+    margin-left: 10px;
+    font-style: italic;
+  }
+
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // Find all H1 headers
     var headers = document.querySelectorAll("h1");
 
-    headers.forEach(function(header) {
-      // Collect all content under each header until the next H1
+    headers.forEach(function(header, index) {
+      // Collect content under each header until the next H1
       var content = [];
       var sibling = header.nextElementSibling;
 
@@ -239,7 +247,19 @@ Questions from venues about subscribing to ARR should be directed to the Editors
       // Insert the panel after the header
       header.parentNode.insertBefore(panel, header.nextElementSibling);
 
-      // Toggle the content visibility when the header is clicked
+      // Show the first header's content by default
+      if (index === 0) {
+        header.classList.add("active");
+        panel.style.display = "block";
+      } else {
+        // For other headers, add a "Click to view full content" message
+        var viewMessage = document.createElement("span");
+        viewMessage.className = "view-content-msg";
+        viewMessage.innerText = "Click to view full content";
+        header.appendChild(viewMessage);
+      }
+
+      // Toggle content visibility when the header is clicked
       header.addEventListener("click", function() {
         header.classList.toggle("active");
         panel.style.display = panel.style.display === "block" ? "none" : "block";

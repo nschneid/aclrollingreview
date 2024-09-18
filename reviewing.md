@@ -279,9 +279,15 @@ Questions from venues about subscribing to ARR should be directed to the Editors
       }
     });
 
-    // Ensure all H1 headers are visible when the page loads
-    headers.forEach(function(header) {
-      header.style.display = 'block'; // Ensure all headers are visible immediately
-    });
+    // Ensure all content before the first H1 is visible on page load
+    var firstH1 = document.querySelector("h1");
+    if (firstH1) {
+      // Show all elements between the page load and the first H1
+      var sibling = firstH1.previousElementSibling;
+      while (sibling) {
+        sibling.style.display = "block"; // Make sure everything before the first H1 is displayed
+        sibling = sibling.previousElementSibling;
+      }
+    }
   });
 </script>

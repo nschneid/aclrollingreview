@@ -33,12 +33,10 @@ ADDITIONAL INFORMATION
 
 The workflow manager works under the direct supervision of the ARR Editors-in-Chief.
 
-The start date of this position is November 1, 2024. The workload varies somewhat
+The start date of this position is November 1, 2024. 
 
-over the course of the bi-monthly cycles but averages approximately 20 hours weekly.
+The workload varies somewhat over the course of the bi-monthly cycles but averages approximately 20 hours weekly.
 
 To apply, submit a cover letter, CV/resume, and three references. If you have
 
-questions about this position or to submit an application, contact us via
-
-email at: editors@aclrollingreview.org [1] and thamar.solorio@mbzuai.ac.ae [2].
+Questions about this position or to submit an application, contact us via email at: editors@aclrollingreview.org [1] and thamar.solorio@mbzuai.ac.ae [2].

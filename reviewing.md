@@ -199,10 +199,9 @@ Note that the ARR review process is not customized to any particular venue. All 
 
 Questions from venues about subscribing to ARR should be directed to the Editors-in-Chief.
 
-
 <style>
   .panel {
-    display: none;
+    display: none; /* All content is hidden by default */
     margin-top: 0;
   }
 
@@ -211,16 +210,17 @@ Questions from venues about subscribing to ARR should be directed to the Editors
   }
 
   h1.active + .panel {
-    display: block;
+    display: block; /* Content is shown when a header is clicked */
   }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    // Find all H1 headers
     var headers = document.querySelectorAll("h1");
 
     headers.forEach(function(header) {
-      // Wrap the content under the header in a div.panel
+      // Collect all content under each header until the next H1
       var content = [];
       var sibling = header.nextElementSibling;
 
@@ -229,17 +229,20 @@ Questions from venues about subscribing to ARR should be directed to the Editors
         sibling = sibling.nextElementSibling;
       }
 
+      // Create a <div class="panel"> to wrap the content
       var panel = document.createElement("div");
       panel.className = "panel";
       content.forEach(function(item) {
         panel.appendChild(item);
       });
 
+      // Insert the panel after the header
       header.parentNode.insertBefore(panel, header.nextElementSibling);
 
-      // Add click event to toggle the panel
+      // Toggle the content visibility when the header is clicked
       header.addEventListener("click", function() {
         header.classList.toggle("active");
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
       });
     });
   });

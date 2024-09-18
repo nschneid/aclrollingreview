@@ -37,6 +37,6 @@ The start date of this position is November 1, 2024.
 
 The workload varies somewhat over the course of the bi-monthly cycles but averages approximately 20 hours weekly.
 
-To apply, submit a cover letter, CV/resume, and three references. If you have
+To apply, submit a cover letter, CV/resume, and three references. 
 
-Questions about this position or to submit an application, contact us via email at: editors@aclrollingreview.org [1] and thamar.solorio@mbzuai.ac.ae [2].
+If you have questions about this position or to submit an application, contact us via email at: editors@aclrollingreview.org [1] and thamar.solorio@mbzuai.ac.ae [2].

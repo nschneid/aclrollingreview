@@ -201,7 +201,7 @@ Questions from venues about subscribing to ARR should be directed to the Editors
 
 <style>
   .panel {
-    display: none; /* Content is hidden by default for all sections except the first one */
+    display: none; /* Content hidden by default */
     margin-top: 0;
   }
 
@@ -217,10 +217,10 @@ Questions from venues about subscribing to ARR should be directed to the Editors
   .view-content-msg {
     font-size: 14px;
     color: gray;
-    margin-left: 10px;
+    margin-left: 0; /* Move to the next line */
     font-style: italic;
+    display: block; /* Display the message on a new line */
   }
-
 </style>
 
 <script>
@@ -247,22 +247,21 @@ Questions from venues about subscribing to ARR should be directed to the Editors
       // Insert the panel after the header
       header.parentNode.insertBefore(panel, header.nextElementSibling);
 
-      // Show the first header's content by default
-      if (index === 0) {
-        header.classList.add("active");
-        panel.style.display = "block";
-      } else {
-        // For other headers, add a "Click to view full content" message
-        var viewMessage = document.createElement("span");
-        viewMessage.className = "view-content-msg";
-        viewMessage.innerText = "Click to view full content";
-        header.appendChild(viewMessage);
-      }
+      // For all headers, add the "Click to view full content" message
+      var viewMessage = document.createElement("span");
+      viewMessage.className = "view-content-msg";
+      viewMessage.innerText = "Click to view full content";
+      header.parentNode.insertBefore(viewMessage, panel);
 
       // Toggle content visibility when the header is clicked
       header.addEventListener("click", function() {
         header.classList.toggle("active");
         panel.style.display = panel.style.display === "block" ? "none" : "block";
+
+        // Hide the "Click to view full content" message once clicked
+        if (panel.style.display === "block") {
+          viewMessage.style.display = "none";
+        }
       });
     });
   });
